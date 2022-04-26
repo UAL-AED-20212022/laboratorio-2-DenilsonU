@@ -110,7 +110,7 @@ class LinkedList:
                 print("Item found")
                 return True
             n = n.ref
-        print("item bot found")
+        print("item not found")
         return False
 
 
@@ -146,7 +146,6 @@ class LinkedList:
 
         else:
             n.ref = n.ref.ref
-            
     def reverse_linkedlist(self):
         prev = None
         n = self.start_node
@@ -157,22 +156,7 @@ class LinkedList:
             n = next
 
         self.start_node = prev
-    
-    def get_last_node(self): 
-        #retorna o último elemento da lista
-        n = 1
-        temp = self.start_node
-        length = 0
-        while temp is not None:
-            temp = temp.ref
-            length += 1
-
-        if n > length: 
-            return
-        temp = self.start_node
-        for i in range(0, length - n):
-            temp = temp.ref
-        return temp.item
+            
 
 
 
